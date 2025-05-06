@@ -35,7 +35,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainNavigation />,
-    children: [{ path: "/", element: <Home />, loader: getAllRecipes }],
+    children: [
+      { path: "/", element: <Home />, loader: getAllRecipes },
+      { path: "/myrecipe", element: <Home /> },
+      { path: "/favrecipe", element: <Home /> },
+    ],
     // errorElement: <ErrorPage />,
   },
 ]);

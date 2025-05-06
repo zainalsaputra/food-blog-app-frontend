@@ -23,7 +23,7 @@ export default function InputForm({ setIsOpen }) {
       const response = await axios.post(url, data);
       console.log(response.data);
       localStorage.setItem("user", JSON.stringify(response.data.data));
-      localStorage.setItem("token", response.data.accessToken);
+      localStorage.setItem("accessToken", response.data.accessToken);
       setIsOpen();
     } catch (error) {
       // console.error("Error:", error);
