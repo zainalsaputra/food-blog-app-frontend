@@ -192,10 +192,26 @@ section {
   z-index: 9;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
 .form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
+  max-width: 500px; /* Batasi lebar maksimum form */
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .form-control {
@@ -211,7 +227,8 @@ section {
   color: #213547;
 }
 
-.form-control input {
+.form-control input,
+.form-control textarea {
   border: 1px solid #cbd5e1;
   background-color: #fff;
   border-radius: 6px;
@@ -222,7 +239,8 @@ section {
   color: #000000;
 }
 
-.form-control input:focus {
+.form-control input:focus,
+.form-control textarea:focus {
   border-color: #60c6a8;
   box-shadow: 0 0 0 2px rgba(96, 198, 168, 0.3);
 }
@@ -256,16 +274,9 @@ section {
   color: red;
   font-size: 13px;
 }
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
 
-.add-recipe {
-  width: 100%;
+.input-textarea {
+  resize: vertical;
 }
 
 .recipe {

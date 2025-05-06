@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { IoMdStopwatch } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
 
-import foodImg from "../assets/foodRecipe.png";
+// import foodImg from "../assets/foodRecipe.png";
 
 export default function RecipeItems() {
   const allRecipes = useLoaderData();
@@ -15,7 +15,7 @@ export default function RecipeItems() {
           return (
             <div className="card" key={index}>
               <img
-                src={foodImg}
+                src={`${import.meta.env.VITE_API_URL}/uploads/${item.coverImage}`}
                 alt={item.title}
                 width="120px"
                 height="100px"

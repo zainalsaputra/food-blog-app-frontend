@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import foodRecipe from "../assets/foodRecipe.png";
 import RecipeItems from "../components/RecipeItems";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       <section className="home">
@@ -15,7 +18,9 @@ export default function Home() {
             distribution of letters, as opposed to using 'Content here, content
             here', making it look like readable English
           </h5>
-          <button>Share your recipe</button>
+          <button onClick={() => navigate("/addrecipe")}>
+            Share your recipe
+          </button>
         </div>
         <div className="right">
           <img src={foodRecipe} width="320px" height="300px" />
