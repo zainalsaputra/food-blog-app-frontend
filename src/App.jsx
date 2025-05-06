@@ -5,6 +5,7 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home";
 import MainNavigation from "./components/MainNavigation";
+import ErrorPage from "./pages/ErrorPage";
 
 // const getAllRecipes = async () => {
 //   const response = await fetch(
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <MainNavigation />,
     children: [{ path: "/", element: <Home />, loader: getAllRecipes }],
+    // errorElement: <ErrorPage />,
   },
 ]);
 

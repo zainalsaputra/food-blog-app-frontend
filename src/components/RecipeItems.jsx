@@ -23,7 +23,9 @@ export default function RecipeItems() {
               <div className="card-body">
                 <div className="title">{item.title}</div>
                 <div className="icons">
-                  <div className="timer"><IoMdStopwatch/> 30 min</div>
+                  <div className="timer">
+                    <IoMdStopwatch /> 30 min
+                  </div>
                   <FaRegHeart />
                 </div>
               </div>
